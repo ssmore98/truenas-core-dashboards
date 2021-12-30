@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import sys
 import os
 import requests
 import glob
@@ -7,7 +8,7 @@ import json
 import shutil
 from pprint import pprint
 
-server = "10.1.1.222:3000"
+server = "{0}:3000".format(sys.argv[1])
 GDIR   = '{HOME}/.config/grafana'.format(HOME=os.getenv("HOME"))
 
 uids = ['novl4l-ik']
